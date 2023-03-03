@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* nav */ 
+
+
+.container {
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #4c35e5;
+}
+
+.nav {
+    max-width: 968px;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+    color: #DBE2E6;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.nav__logo:hover {
+    color: var(--ff-accent);
+}
+
+.nav__btns {
+    display: flex;
+    align-items: center;
+}
+
+.theme-customization {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    color: #DBE2E6;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover,
+.theme-customization:hover {
+    color: var(--ff-accent);
+}
+
+.nav__toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: #4c35e5;
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15 );
+        border-radius: 1.2rem 1.2rem 0 0;
+        transition: .3s;
+    }
+}
+
+.nav__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #DBE2E6;
+    font-weight: 500;
+    list-style: none;
+    
+}
+
+.nav__link:hover {
+    color: var(--ff-accent);
+}
+
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+.nav__close {
+    position: absolute;
+    right: 1.2rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #DBE2E6;
+}
+
+/* show menu */
+.show-menu {
+    bottom: 0;
+}
+
+@media screen and (max-width: 350px) { 
+    .nav__menu {
+        padding: 2rem .25rem 4rem;
+    }
+
+    .nav__list {
+        column-gap: 0;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .header {
+        top: 0;
+        bottom: initial;
+    }
+
+    .nav {
+        height: 4.5rem;
+        column-gap: 1rem;
+    }
+
+    .nav__icon,
+    .nav__close,
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__list {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    .nav__menu {
+        margin-left: auto;
+    }
+
+    .theme-customization {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* body */ 
+
+.main_container {
+    margin-inline: auto;
+    width: min(80%, 70.5rem);
+  }
+
+.split1 {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.flex-wrapper1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;     
+}
+
+
+.flex-child1 a img {
+    padding: 20px 20px;
+    
+}
+
+.flex-wrapper2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+
+}
+.flex-child2 {
+    flex-basis: 30%;
+    margin-bottom: 40px;
+    text-decoration: none;   
+}
+
+.flex-child2 a :hover {
+    opacity: 50%;
+}
+
+.headline-projects {
+    text-align: right;
+    padding-right: 2.90vw;
+}
+
+.position-text {
+    padding-top: 30%;
+}  
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+.center {
+    margin: auto;
+    width: 80vw;
+}
+
+
+@media (min-width: 40em) {
+    .split {
+      flex-direction: row;
+    }
+  
+    /*all direct children of the .split will have equal columns */
+  
+    .split > * {
+      flex-basis: 100%; /* setting ideal width */
+    }
+  
+    /*Json sibling selector = any element that has a sibling before it adds margin */
+  
+    .split > * + * {
+      margin-left: 3em;
+    }
+  }
+
+section {
+    padding: 15rem 0;
+
+}
+
+p a{
+    color: #59ABE3;
+    line-height:40px;
+} 
+
+p a:hover {
+    color: #59ABE3;
+    text-decoration: underline;
+}
+
+footer {
+    background: #1F1C33;
+    background-size: 100%;
+    padding: 1vw 2vw;
+    
+}
+.footer-container{
+    margin: auto;
+    width: 80vw;
+    padding-bottom: 50px;
+    
+     
+}
+footer p a {
+    text-decoration: none;
+}
